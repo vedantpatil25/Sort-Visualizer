@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sort Visualizer</title>
+    <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+
+
+<p style="position: fixed; right: 1rem; color: white; margin-top: 0; ">
+</p>
+<div id="mainBox">
+    <H1> Sorting Visualizer </H1>
+    <div class="sizeSpeed">
+        <div>
+            <div style="flex:0.2; text-align:center">
+                <h3>Size</h3>
+            </div>
+            <div style="flex:0.8">
+                <input type="range" min=10 max=50 value=25 class="slider" id="myRange">
+            </div>
+        </div>
+        <div>
+            <div style="flex:0.2; text-align:center">
+                <h3>Speed</h3>
+            </div>
+            <div style="flex:0.8">
+                <input type="range" min=50 max=500 value=100 class="slider" id="sortSpeed">
+            </div>
+        </div>
+    </div>
+
+    <div class="FlexBox">
+        <div id="DataBox">
+
+        </div>
+    </div>
+
+    <div class="controlButtons">
+        <div>
+            <button id="haltButton" onclick="haltSort();">Halt</button>
+        </div>
+        <div>
+            <button id="resetButton" onclick="resetSort()">Reset</button>
+        </div>
+    </div>
+
+    <div class="sortButtons">
+        <div style="width: 60%; display: flex; flex-wrap: wrap; align-items: center; justify-content:space-evenly;">
+
+            <div>
+                <button class="sortButton" onclick="BubbleSort(barArray)">Bubble Sort</button>
+            </div>
+            <div>
+                <button class="sortButton" onclick="InsertionSort(barArray)">Insertion Sort</button>
+            </div>
+            <div>
+                <button class="sortButton" onclick="SelectionSort(barArray)">Selection Sort</button>
+            </div>
+            <div>
+                <button class="sortButton" onclick="MergeSort(barArray, 0, barArray.length - 1)">Merge Sort</button>
+            </div>
+            <div>
+                <button class="sortButton" onclick="QuickSort(barArray, 1, barArray.length - 1)">Quick Sort</button>
+            </div>
+            <div>
+                <button class="sortButton" onclick="ShellSort(barArray)">Shell Sort</button>
+            </div>
+
+<!--        <button onclick="CountingSort(barArray)">Counting Sort</button>-->
+        </div>
+    </div>
+
+</div>
+
+
+<script src="./script.js"></script>
+</body>
+</html>
